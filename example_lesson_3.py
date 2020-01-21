@@ -14,5 +14,12 @@ content = f.read()
 content = content.replace(".","").replace(",","").replace(";","").replace(":","").replace("!","").replace("?","").replace("/","").replace(")","").replace("(","").replace("-","").replace("«","").replace("»","").replace("—","")
 lst = content.split()
 lst_lower = list(map(lambda x: x.lower(), lst))
-print(lst_lower)
+# print(lst_lower)
 
+dct = {}
+for word in lst_lower:
+    if word in dct:
+        dct[word] +=1
+    else:
+        dct[word] = 1
+print(dct)
