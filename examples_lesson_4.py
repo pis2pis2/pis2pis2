@@ -23,20 +23,20 @@ def f(list_names,n):
 list_names_random = f(list_names,50)
 print (list_names_random)
 
-count = {}
-for word in list_names_random:
-    if word in count:
-        count[word] +=1
-    else:
-        count[word] = 1
-print(count,type(count))
-
-print ('наиболее часто встречающиеся имя:')
-lst_srt = sorted(count.items(), key=lambda x: x[1],reverse=True)
-print(lst_srt,type(lst_srt))
-for i in range(1):
-    # print(lst_srt[i][0],'-',lst_srt[i][1],type(lst_srt))
-    print(lst_srt[i][0])
+# count = {}
+# for word in list_names_random:
+#     if word in count:
+#         count[word] +=1
+#     else:
+#         count[word] = 1
+# print(count,type(count))
+#
+# print ('наиболее часто встречающиеся имя:')
+# lst_srt = sorted(count.items(), key=lambda x: x[1],reverse=True)
+# print(lst_srt,type(lst_srt))
+# for i in range(1):
+#     # print(lst_srt[i][0],'-',lst_srt[i][1],type(lst_srt))
+#     print(lst_srt[i][0])
 #
 # import random
 #
@@ -94,6 +94,7 @@ def popular_name(list_names_random):
 
     return popular_names_list
 
+
 print('Имя:', popular_name(list_names_random))
 print()
 
@@ -108,7 +109,7 @@ def rare_letter(list_names_random):
     for name in list_names_random:
         first_letter = name[0]
         first_letter_list.append(first_letter)
-    #print(first_letter_list, len(first_letter_list)) # для проверки количества букв
+    print(first_letter_list, len(first_letter_list)) # для проверки количества букв
 
     # Создаем словарь из букв и количества их упоминаний
     dict_rare_letter = {a: first_letter_list.count(a) for a in first_letter_list}
